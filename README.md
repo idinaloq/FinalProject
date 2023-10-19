@@ -23,7 +23,6 @@
 4. [실행 화면](#4. )
 5. [트러블 슈팅](#5.)
 6. [참고 자료](#6.)
-7. [팀 회고](#7.)
 
 <a id="1."></a></br>
 ## 👨‍💻 팀원 소개
@@ -176,4 +175,3 @@ struct SeoulParkingInformationModel: Decodable {
 - [𝗡 Naver Maps: `네이버 지도 SDK 사용하기`](https://navermaps.github.io/ios-map-sdk/guide-ko/1.html)
 - [🌐 Blog: `네이버지도  API 사용하기`](https://velog.io/@mandos1995/Xcode-네이버-지도-API-사용하기)
 - [🌐 Blog: `네이버지도  API 사용하기(2)`](https://blog.naver.com/PostView.naver?blogId=soojin_2604&logNo=222402500216&parentCategoryNo=&categoryNo=39&viewDate=&isShowPopularPosts=true&from=search)
-
