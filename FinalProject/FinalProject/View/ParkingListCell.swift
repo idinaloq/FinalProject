@@ -132,13 +132,3 @@ final class ParkingListCell: UITableViewCell {
         currentParkingLabel.text = "주차가능대수: \(remainParking)"
     }
 }
-
-
-/*
- 셀에 추가할 것 ㅇ
- 주차장 이름 ㅇ
- 유료, 무료 (토,일 포함)ㅇ
- 운영 시간 (토, 일 포함)ㅇ
- 주차가능대수 x
- 현재 위치에서의 거리 x
- */

@@ -83,7 +83,6 @@ final class HomeViewController: UIViewController {
                     
                     if let _ = self?.parkingData {
                         self?.parkingData?.appendData(newRow: decodedData)
-//                        print(decodedData)
                     } else {
                         self?.parkingData = decodedData
                         listCount = decodedData.getParkingInformation.listTotalCount
