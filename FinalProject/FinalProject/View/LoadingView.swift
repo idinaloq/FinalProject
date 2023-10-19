@@ -45,7 +45,7 @@ class LoadingView: UIView {
     private func configureUI() {
         translatesAutoresizingMaskIntoConstraints = false
         layer.zPosition = 1
-        backgroundColor = .systemGreen
+        backgroundColor = .systemBackground
         addSubview(activityIndicator)
     }
     
@@ -54,6 +54,7 @@ class LoadingView: UIView {
             activityIndicator.centerXAnchor.constraint(equalTo: centerXAnchor),
             activityIndicator.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
-        
     }
+    
+    
 }

@@ -6,9 +6,10 @@
 //
 
 import UIKit
+import NMapsMap
 
 class ListViewController: UIViewController {
-    var parkingData: SeoulParkingInformationModel
+    private var visibleMarkerRows: [Row] = []
     
     private let parkingListTableView: UITableView = {
         let tableView: UITableView = UITableView()
@@ -19,8 +20,8 @@ class ListViewController: UIViewController {
         
     }()
     
-    init(parkingData: SeoulParkingInformationModel) {
-        self.parkingData = parkingData
+    init(visibleMarkerRows: [Row]) {
+        self.visibleMarkerRows = visibleMarkerRows
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -55,7 +56,7 @@ class ListViewController: UIViewController {
 extension ListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        
-        return 3
+        return visibleMarkerRows.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -64,6 +65,12 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
             
             return ParkingListCell()
         }
+        
+        
+        
+        guard let markerData = visibleMarkerRows[safe: indexPath.item] else { return ParkingListCell() }
+        
+        cell.configureLabel(parkingName: markerData.parkingName, payName: markerData.payName, weekStart: markerData.weekdayBeginTime, weekEnd: markerData.weekdayEndTime, weekendStart: markerData.weekdayBeginTime, weekendEnd: markerData.weekendEndTime, remainParking: markerData.currentParking)
         
         return cell
     }

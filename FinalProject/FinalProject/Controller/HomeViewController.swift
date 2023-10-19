@@ -10,23 +10,28 @@ import NMapsMap
 
 final class HomeViewController: UIViewController {
     private var parkingData: SeoulParkingInformationModel?
+    private var uniqueRows: [Row] = []
+    private var visibleMarkerRows: [Row] = []
     private var seoulOpenAPI: SeoulOpenAPI = SeoulOpenAPI()
     private var networkService: NetworkService = NetworkService()
     private var jsonDecoder: JsonDecoder = JsonDecoder()
     private let loadingView: LoadingView = LoadingView()
     private lazy var mapView = NMFMapView(frame: view.frame)
+    private var allMarkers: [NMFMarker] = []
+    private var visibleMarkers: [NMFMarker] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         loadingView.show()
-        configureLoadingView()
+        configureViews()
         configureNavigation()
         receiveData()
-        configureMap()
+        
     }
     
-    private func configureLoadingView() {
+    private func configureViews() {
         view.addSubview(loadingView)
+        view.addSubview(mapView)
         
         NSLayoutConstraint.activate([
             loadingView.topAnchor.constraint(equalTo: view.topAnchor),
@@ -52,8 +57,8 @@ final class HomeViewController: UIViewController {
 
     @objc private func tappedMoreButton() {
         guard let parkingData = parkingData else { return }
-        
-        let listViewController: ListViewController = ListViewController(parkingData: parkingData)
+        getVisibleMarkers()
+        let listViewController: ListViewController = ListViewController(visibleMarkerRows: visibleMarkerRows)
         navigationController?.pushViewController(listViewController, animated: true)
     }
     
@@ -61,7 +66,7 @@ final class HomeViewController: UIViewController {
         DispatchQueue.global().async { [weak self] in
             
             var min: Int = 1
-            var max: Int = 100
+            var max: Int = 1000
             var listCount: Int = 1001
             let dispatchGroup = DispatchGroup()
             
@@ -78,7 +83,7 @@ final class HomeViewController: UIViewController {
                     
                     if let _ = self?.parkingData {
                         self?.parkingData?.appendData(newRow: decodedData)
-                        print(decodedData)
+//                        print(decodedData)
                     } else {
                         self?.parkingData = decodedData
                         listCount = decodedData.getParkingInformation.listTotalCount
@@ -90,7 +95,7 @@ final class HomeViewController: UIViewController {
                 }
                 dispatchGroup.wait()
             }
-            
+            self?.deleteSameParkingName()
             self?.addMarker()
             self?.loadingView.hide()
         }
@@ -107,29 +112,64 @@ final class HomeViewController: UIViewController {
             return nil
         }
     }
-    
-    private func configureMap() {
-        view.addSubview(mapView)
-    }
-    
+
     private func addMarker() {
         DispatchQueue.main.async {
 
-            guard let parkingData = self.parkingData else { return }
-            
-            for rowElement in parkingData.getParkingInformation.row {
-                guard rowElement.parkingName != "" && else { return }
-                
+            for rowElement in self.uniqueRows {
+
                 let marker = NMFMarker()
                 marker.position = NMGLatLng(lat: rowElement.lat, lng: rowElement.lng)
+                marker.isHideCollidedMarkers = true
+                marker.isForceShowIcon = true
                 marker.captionText = "\(rowElement.parkingName)"
-                print(rowElement.parkingName)
                 marker.mapView = self.mapView
+                self.allMarkers.append(marker)
+                
+                let infoWindow = NMFInfoWindow()
+                let dataSource = NMFInfoWindowDefaultTextSource.data()
+                dataSource.title = "\(rowElement.parkingName)"
+                infoWindow.dataSource = dataSource
+                
+                marker.touchHandler = { (overlay: NMFOverlay) -> Bool in
+                    infoWindow.open(with: marker)
+                    return true
+                }
             }
-            
-            
-            
         }
+    }
+    
+    private func getVisibleMarkers() {
+        visibleMarkers = allMarkers.filter { marker in
+            let markerScreenPosition = mapView.projection.point(from: marker.position)
+            
+            return mapView.bounds.contains(markerScreenPosition)
+        }
+        
+        var markerRows: [String: Row] = [:]
+        
+        for row in 0..<uniqueRows.count {
+            for index in 0..<visibleMarkers.count {
+                if uniqueRows[row].parkingName == visibleMarkers[index].captionText {
+                    markerRows[uniqueRows[row].parkingName] = uniqueRows[row]
+                }
+            }
+        }
+        visibleMarkerRows = Array(markerRows.values)
+    }
+
+    private func deleteSameParkingName() {
+        var uniqueRowsDict: [String: Row] = [:]
+        
+        guard let parkingData = parkingData else { return }
+        
+        for row in parkingData.getParkingInformation.row {
+            if uniqueRowsDict[row.parkingName] == nil {
+                uniqueRowsDict[row.parkingCode] = row
+            }
+        }
+        
+        uniqueRows = Array(uniqueRowsDict.values)
     }
 }
 

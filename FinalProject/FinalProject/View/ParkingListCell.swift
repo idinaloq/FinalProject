@@ -116,6 +116,21 @@ final class ParkingListCell: UITableViewCell {
             currentParkingStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
         ])
     }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        parkingNameLabel.text = ""
+        payNameLabel.text = ""
+        weekdayTimeLabel.text = ""
+        currentParkingLabel.text = ""
+    }
+    
+    func configureLabel(parkingName: String, payName: String, weekStart: String, weekEnd: String,weekendStart: String, weekendEnd: String, remainParking: Int) {
+        parkingNameLabel.text = "주차장 이름: \(parkingName)"
+        payNameLabel.text = "유/무료 구분: \(payName)"
+        weekdayTimeLabel.text = "운영시간: 평일\(weekStart)~\(weekEnd) / 주말\(weekendStart)~\(weekendEnd)"
+        currentParkingLabel.text = "주차가능대수: \(remainParking)"
+    }
 }
 
 
