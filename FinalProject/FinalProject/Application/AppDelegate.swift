@@ -2,13 +2,13 @@
 //  AppDelegate.swift
 //  FinalProject
 //
-//  Created by JSB on 2023/10/19.
+//  Created by idinaloq on 2023/10/10.
 //
 
 import UIKit
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+final class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 

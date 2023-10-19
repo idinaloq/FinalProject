@@ -7,23 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DC4F61F82AE15D1800144066 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4F61F72AE15D1800144066 /* AppDelegate.swift */; };
-		DC4F61FA2AE15D1800144066 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4F61F92AE15D1800144066 /* SceneDelegate.swift */; };
-		DC4F61FC2AE15D1800144066 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4F61FB2AE15D1800144066 /* ViewController.swift */; };
-		DC4F61FF2AE15D1800144066 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC4F61FD2AE15D1800144066 /* Main.storyboard */; };
-		DC4F62012AE15D1900144066 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC4F62002AE15D1900144066 /* Assets.xcassets */; };
-		DC4F62042AE15D1900144066 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC4F62022AE15D1900144066 /* LaunchScreen.storyboard */; };
+		DC4F62512AE15F7000144066 /* SeoulOpenAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4F620E2AE15F6F00144066 /* SeoulOpenAPI.swift */; };
+		DC4F62522AE15F7000144066 /* JsonDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4F620F2AE15F6F00144066 /* JsonDecoder.swift */; };
+		DC4F62532AE15F7000144066 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4F62102AE15F6F00144066 /* NetworkService.swift */; };
+		DC4F62542AE15F7000144066 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC4F62122AE15F6F00144066 /* LaunchScreen.storyboard */; };
+		DC4F62552AE15F7000144066 /* ParkingListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4F62142AE15F6F00144066 /* ParkingListCell.swift */; };
+		DC4F62562AE15F7000144066 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4F62152AE15F6F00144066 /* LoadingView.swift */; };
+		DC4F62572AE15F7000144066 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4F62172AE15F6F00144066 /* ListViewController.swift */; };
+		DC4F62582AE15F7000144066 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4F62182AE15F6F00144066 /* HomeViewController.swift */; };
+		DC4F62752AE15F7000144066 /* GetParkingInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4F62442AE15F7000144066 /* GetParkingInformation.swift */; };
+		DC4F62762AE15F7000144066 /* SeoulParkingInformationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4F62452AE15F7000144066 /* SeoulParkingInformationModel.swift */; };
+		DC4F62772AE15F7000144066 /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4F62462AE15F7000144066 /* Row.swift */; };
+		DC4F62782AE15F7000144066 /* ResultCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4F62472AE15F7000144066 /* ResultCode.swift */; };
+		DC4F62792AE15F7000144066 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC4F62492AE15F7000144066 /* Assets.xcassets */; };
+		DC4F627B2AE15F7000144066 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4F624C2AE15F7000144066 /* AppDelegate.swift */; };
+		DC4F627C2AE15F7000144066 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4F624D2AE15F7000144066 /* SceneDelegate.swift */; };
+		DC4F627D2AE15F7000144066 /* Array+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4F624F2AE15F7000144066 /* Array+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DC4F61F42AE15D1800144066 /* FinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		DC4F61F72AE15D1800144066 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DC4F61F92AE15D1800144066 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DC4F61FB2AE15D1800144066 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DC4F61FE2AE15D1800144066 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		DC4F62002AE15D1900144066 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		DC4F62032AE15D1900144066 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC4F62052AE15D1900144066 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC4F620E2AE15F6F00144066 /* SeoulOpenAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeoulOpenAPI.swift; sourceTree = "<group>"; };
+		DC4F620F2AE15F6F00144066 /* JsonDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonDecoder.swift; sourceTree = "<group>"; };
+		DC4F62102AE15F6F00144066 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		DC4F62132AE15F6F00144066 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DC4F62142AE15F6F00144066 /* ParkingListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkingListCell.swift; sourceTree = "<group>"; };
+		DC4F62152AE15F6F00144066 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		DC4F62172AE15F6F00144066 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		DC4F62182AE15F6F00144066 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		DC4F62442AE15F7000144066 /* GetParkingInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetParkingInformation.swift; sourceTree = "<group>"; };
+		DC4F62452AE15F7000144066 /* SeoulParkingInformationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeoulParkingInformationModel.swift; sourceTree = "<group>"; };
+		DC4F62462AE15F7000144066 /* Row.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Row.swift; sourceTree = "<group>"; };
+		DC4F62472AE15F7000144066 /* ResultCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultCode.swift; sourceTree = "<group>"; };
+		DC4F62492AE15F7000144066 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DC4F624C2AE15F7000144066 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DC4F624D2AE15F7000144066 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		DC4F624F2AE15F7000144066 /* Array+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +76,97 @@
 		DC4F61F62AE15D1800144066 /* FinalProject */ = {
 			isa = PBXGroup;
 			children = (
-				DC4F61F72AE15D1800144066 /* AppDelegate.swift */,
-				DC4F61F92AE15D1800144066 /* SceneDelegate.swift */,
-				DC4F61FB2AE15D1800144066 /* ViewController.swift */,
-				DC4F61FD2AE15D1800144066 /* Main.storyboard */,
-				DC4F62002AE15D1900144066 /* Assets.xcassets */,
-				DC4F62022AE15D1900144066 /* LaunchScreen.storyboard */,
-				DC4F62052AE15D1900144066 /* Info.plist */,
+				DC4F62192AE15F7000144066 /* API */,
+				DC4F624B2AE15F7000144066 /* Application */,
+				DC4F62162AE15F6F00144066 /* Controller */,
+				DC4F624E2AE15F7000144066 /* Extension */,
+				DC4F620C2AE15F6F00144066 /* Model */,
+				DC4F62482AE15F7000144066 /* Resource */,
+				DC4F62112AE15F6F00144066 /* View */,
 			);
 			path = FinalProject;
+			sourceTree = "<group>";
+		};
+		DC4F620C2AE15F6F00144066 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DC4F620D2AE15F6F00144066 /* SeoulOpenAPI */,
+				DC4F620F2AE15F6F00144066 /* JsonDecoder.swift */,
+				DC4F62102AE15F6F00144066 /* NetworkService.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DC4F620D2AE15F6F00144066 /* SeoulOpenAPI */ = {
+			isa = PBXGroup;
+			children = (
+				DC4F620E2AE15F6F00144066 /* SeoulOpenAPI.swift */,
+			);
+			path = SeoulOpenAPI;
+			sourceTree = "<group>";
+		};
+		DC4F62112AE15F6F00144066 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DC4F62122AE15F6F00144066 /* LaunchScreen.storyboard */,
+				DC4F62142AE15F6F00144066 /* ParkingListCell.swift */,
+				DC4F62152AE15F6F00144066 /* LoadingView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DC4F62162AE15F6F00144066 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DC4F62172AE15F6F00144066 /* ListViewController.swift */,
+				DC4F62182AE15F6F00144066 /* HomeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DC4F62192AE15F7000144066 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				DC4F62432AE15F7000144066 /* SeoulOpenAPI */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		DC4F62432AE15F7000144066 /* SeoulOpenAPI */ = {
+			isa = PBXGroup;
+			children = (
+				DC4F62442AE15F7000144066 /* GetParkingInformation.swift */,
+				DC4F62452AE15F7000144066 /* SeoulParkingInformationModel.swift */,
+				DC4F62462AE15F7000144066 /* Row.swift */,
+				DC4F62472AE15F7000144066 /* ResultCode.swift */,
+			);
+			path = SeoulOpenAPI;
+			sourceTree = "<group>";
+		};
+		DC4F62482AE15F7000144066 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				DC4F62492AE15F7000144066 /* Assets.xcassets */,
+				DC4F62052AE15D1900144066 /* Info.plist */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		DC4F624B2AE15F7000144066 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				DC4F624C2AE15F7000144066 /* AppDelegate.swift */,
+				DC4F624D2AE15F7000144066 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		DC4F624E2AE15F7000144066 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				DC4F624F2AE15F7000144066 /* Array+.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +227,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC4F62042AE15D1900144066 /* LaunchScreen.storyboard in Resources */,
-				DC4F62012AE15D1900144066 /* Assets.xcassets in Resources */,
-				DC4F61FF2AE15D1800144066 /* Main.storyboard in Resources */,
+				DC4F62792AE15F7000144066 /* Assets.xcassets in Resources */,
+				DC4F62542AE15F7000144066 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,27 +239,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC4F61FC2AE15D1800144066 /* ViewController.swift in Sources */,
-				DC4F61F82AE15D1800144066 /* AppDelegate.swift in Sources */,
-				DC4F61FA2AE15D1800144066 /* SceneDelegate.swift in Sources */,
+				DC4F62762AE15F7000144066 /* SeoulParkingInformationModel.swift in Sources */,
+				DC4F62782AE15F7000144066 /* ResultCode.swift in Sources */,
+				DC4F62552AE15F7000144066 /* ParkingListCell.swift in Sources */,
+				DC4F627B2AE15F7000144066 /* AppDelegate.swift in Sources */,
+				DC4F62772AE15F7000144066 /* Row.swift in Sources */,
+				DC4F62522AE15F7000144066 /* JsonDecoder.swift in Sources */,
+				DC4F627C2AE15F7000144066 /* SceneDelegate.swift in Sources */,
+				DC4F62512AE15F7000144066 /* SeoulOpenAPI.swift in Sources */,
+				DC4F62582AE15F7000144066 /* HomeViewController.swift in Sources */,
+				DC4F62572AE15F7000144066 /* ListViewController.swift in Sources */,
+				DC4F62562AE15F7000144066 /* LoadingView.swift in Sources */,
+				DC4F627D2AE15F7000144066 /* Array+.swift in Sources */,
+				DC4F62532AE15F7000144066 /* NetworkService.swift in Sources */,
+				DC4F62752AE15F7000144066 /* GetParkingInformation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		DC4F61FD2AE15D1800144066 /* Main.storyboard */ = {
+		DC4F62122AE15F6F00144066 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				DC4F61FE2AE15D1800144066 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		DC4F62022AE15D1900144066 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DC4F62032AE15D1900144066 /* Base */,
+				DC4F62132AE15F6F00144066 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -288,11 +392,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VP87844738;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FinalProject/API/KakaoOpenAPI/DaumMap.embeddedframework",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FinalProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -316,11 +423,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VP87844738;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FinalProject/API/KakaoOpenAPI/DaumMap.embeddedframework",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FinalProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
