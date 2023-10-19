@@ -23,9 +23,27 @@
 		DC4F627B2AE15F7000144066 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4F624C2AE15F7000144066 /* AppDelegate.swift */; };
 		DC4F627C2AE15F7000144066 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4F624D2AE15F7000144066 /* SceneDelegate.swift */; };
 		DC4F627D2AE15F7000144066 /* Array+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4F624F2AE15F7000144066 /* Array+.swift */; };
+		DC714F632AE166D9007B96D8 /* Pods_FinalProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C80C6CCF20405770C43A3B33 /* Pods_FinalProject.framework */; };
+		DC714F642AE166D9007B96D8 /* Pods_FinalProject.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C80C6CCF20405770C43A3B33 /* Pods_FinalProject.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		DC714F652AE166D9007B96D8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DC714F642AE166D9007B96D8 /* Pods_FinalProject.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		1351C868E09CE60C2D326D49 /* Pods-FinalProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalProject.debug.xcconfig"; path = "Target Support Files/Pods-FinalProject/Pods-FinalProject.debug.xcconfig"; sourceTree = "<group>"; };
+		C80C6CCF20405770C43A3B33 /* Pods_FinalProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinalProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC4F61F42AE15D1800144066 /* FinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC4F62052AE15D1900144066 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC4F620E2AE15F6F00144066 /* SeoulOpenAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeoulOpenAPI.swift; sourceTree = "<group>"; };
@@ -44,6 +62,7 @@
 		DC4F624C2AE15F7000144066 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC4F624D2AE15F7000144066 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DC4F624F2AE15F7000144066 /* Array+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+.swift"; sourceTree = "<group>"; };
+		FD1BA14756AAB70A9C8F8D5B /* Pods-FinalProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalProject.release.xcconfig"; path = "Target Support Files/Pods-FinalProject/Pods-FinalProject.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,17 +70,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC714F632AE166D9007B96D8 /* Pods_FinalProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6BC55DAFD759F4B2CAC6E96E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C80C6CCF20405770C43A3B33 /* Pods_FinalProject.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		91B41C816254B088FF8650BE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1351C868E09CE60C2D326D49 /* Pods-FinalProject.debug.xcconfig */,
+				FD1BA14756AAB70A9C8F8D5B /* Pods-FinalProject.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		DC4F61EB2AE15D1800144066 = {
 			isa = PBXGroup;
 			children = (
 				DC4F61F62AE15D1800144066 /* FinalProject */,
 				DC4F61F52AE15D1800144066 /* Products */,
+				91B41C816254B088FF8650BE /* Pods */,
+				6BC55DAFD759F4B2CAC6E96E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,11 +117,11 @@
 			children = (
 				DC4F62192AE15F7000144066 /* API */,
 				DC4F624B2AE15F7000144066 /* Application */,
-				DC4F62162AE15F6F00144066 /* Controller */,
 				DC4F624E2AE15F7000144066 /* Extension */,
 				DC4F620C2AE15F6F00144066 /* Model */,
-				DC4F62482AE15F7000144066 /* Resource */,
 				DC4F62112AE15F6F00144066 /* View */,
+				DC4F62162AE15F6F00144066 /* Controller */,
+				DC4F62482AE15F7000144066 /* Resource */,
 			);
 			path = FinalProject;
 			sourceTree = "<group>";
@@ -176,9 +215,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DC4F62082AE15D1900144066 /* Build configuration list for PBXNativeTarget "FinalProject" */;
 			buildPhases = (
+				06A9E96B15B39ADC18F1EB39 /* [CP] Check Pods Manifest.lock */,
 				DC4F61F02AE15D1800144066 /* Sources */,
 				DC4F61F12AE15D1800144066 /* Frameworks */,
 				DC4F61F22AE15D1800144066 /* Resources */,
+				2F871A3F5DC6F00AC280ECDE /* [CP] Embed Pods Frameworks */,
+				DC714F652AE166D9007B96D8 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -233,6 +275,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		06A9E96B15B39ADC18F1EB39 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FinalProject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2F871A3F5DC6F00AC280ECDE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FinalProject/Pods-FinalProject-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FinalProject/Pods-FinalProject-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FinalProject/Pods-FinalProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DC4F61F02AE15D1800144066 /* Sources */ = {
@@ -386,18 +470,16 @@
 		};
 		DC4F62092AE15D1900144066 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1351C868E09CE60C2D326D49 /* Pods-FinalProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VP87844738;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/FinalProject/API/KakaoOpenAPI/DaumMap.embeddedframework",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = FinalProject/Info.plist;
+				INFOPLIST_FILE = FinalProject/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -417,18 +499,16 @@
 		};
 		DC4F620A2AE15D1900144066 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD1BA14756AAB70A9C8F8D5B /* Pods-FinalProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VP87844738;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/FinalProject/API/KakaoOpenAPI/DaumMap.embeddedframework",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = FinalProject/Info.plist;
+				INFOPLIST_FILE = FinalProject/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

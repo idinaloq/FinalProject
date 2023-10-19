@@ -15,7 +15,6 @@ struct SeoulOpenAPI {
         components.port = 8088
         components.path = "/61416856556372653639464a4e716d/json/GetParkingInfo/"
         
-        print(components)
         return components
     }()
     

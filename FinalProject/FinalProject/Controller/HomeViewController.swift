@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import NMapsMap
 
 final class HomeViewController: UIViewController {
     private var parkingData: SeoulParkingInformationModel?
@@ -13,7 +14,7 @@ final class HomeViewController: UIViewController {
     private var networkService: NetworkService = NetworkService()
     private var jsonDecoder: JsonDecoder = JsonDecoder()
     private let loadingView: LoadingView = LoadingView()
-
+    private lazy var mapView = NMFMapView(frame: view.frame)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +22,7 @@ final class HomeViewController: UIViewController {
         configureLoadingView()
         configureNavigation()
         receiveData()
+        configureMap()
     }
     
     private func configureLoadingView() {
@@ -63,7 +65,7 @@ final class HomeViewController: UIViewController {
             var listCount: Int = 1001
             let dispatchGroup = DispatchGroup()
             
-            while max <= 1000 {
+            while max <= listCount {
                 dispatchGroup.enter()
                 
                 guard let urlRequest = self?.receiveUrlRequest(min: min, max: max) else {
@@ -76,6 +78,7 @@ final class HomeViewController: UIViewController {
                     
                     if let _ = self?.parkingData {
                         self?.parkingData?.appendData(newRow: decodedData)
+                        print(decodedData)
                     } else {
                         self?.parkingData = decodedData
                         listCount = decodedData.getParkingInformation.listTotalCount
@@ -87,6 +90,8 @@ final class HomeViewController: UIViewController {
                 }
                 dispatchGroup.wait()
             }
+            
+            self?.addMarker()
             self?.loadingView.hide()
         }
     }
@@ -100,6 +105,30 @@ final class HomeViewController: UIViewController {
             print(error.localizedDescription)
             
             return nil
+        }
+    }
+    
+    private func configureMap() {
+        view.addSubview(mapView)
+    }
+    
+    private func addMarker() {
+        DispatchQueue.main.async {
+
+            guard let parkingData = self.parkingData else { return }
+            
+            for rowElement in parkingData.getParkingInformation.row {
+                guard rowElement.parkingName != "" && else { return }
+                
+                let marker = NMFMarker()
+                marker.position = NMGLatLng(lat: rowElement.lat, lng: rowElement.lng)
+                marker.captionText = "\(rowElement.parkingName)"
+                print(rowElement.parkingName)
+                marker.mapView = self.mapView
+            }
+            
+            
+            
         }
     }
 }
