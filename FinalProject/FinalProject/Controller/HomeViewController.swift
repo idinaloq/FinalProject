@@ -56,7 +56,6 @@ final class HomeViewController: UIViewController {
     }
 
     @objc private func tappedMoreButton() {
-        guard let parkingData = parkingData else { return }
         getVisibleMarkers()
         let listViewController: ListViewController = ListViewController(visibleMarkerRows: visibleMarkerRows)
         navigationController?.pushViewController(listViewController, animated: true)
